@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Fee</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🏫</div>
+            <span>School ERP</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Students
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+
+            <a href="marks.html">
+                <i class="fa-solid fa-book-open"></i>
+                Marks
+            </a>
+
+            <a class="active" href="fees.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fees
+            </a>
+
+           
+
+            <a href="reports.html">
+                <i class="fa-solid fa-file-lines"></i>
+                Reports
+            </a>
+
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            <div>
+                <h1>Add Fee</h1>
+                <span>Home / Fees / Add Fee</span>
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Admin User</strong>
+                    <p>Administrator</p>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="form-card">
+
+            <div class="page-header">
+                <h2>Fee Information</h2>
+                <p>Enter student fee details</p>
+            </div>
+
+            <form id="feeForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Admission No.</label>
+                        <input
+                                type="text"
+                                id="admissionNo"
+                                placeholder="Enter Admission Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student Name</label>
+                        <input
+                                type="text"
+                                id="studentName"
+                                placeholder="Enter Student Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Class</label>
+
+                        <select id="studentClass">
+                            <option value="">Select Class</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Total Fee</label>
+                        <input
+                                type="number"
+                                id="totalFee"
+                                placeholder="Enter Total Fee">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Paid Amount</label>
+                        <input
+                                type="number"
+                                id="paidAmount"
+                                placeholder="Enter Paid Amount">
+                    </div>
+                                        <div class="form-buttons">
+
+                        <a href="fees.html" class="cancel-btn">
+                            Cancel
+                        </a>
+
+                        <button type="submit" class="save-btn">
+                            Save Fee
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/addFee.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

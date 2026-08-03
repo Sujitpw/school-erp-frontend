@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🏫
+            </div>
+
+            <span>School ERP</span>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+    <i class="fa-solid fa-house"></i>
+    Dashboard
+</a>
+
+            <a class="active" href="students.html">
+    <i class="fa-solid fa-user-graduate"></i>
+    Students
+</a>
+
+            <a href="#">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-book-open"></i>
+                Marks
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fees
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                Users
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-file-lines"></i>
+                Reports
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            <div>
+
+                <h1>Add Student</h1>
+<span>Home / Students / Add Student</span>
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>Admin User</strong>
+
+                    <p>Administrator</p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+      <section class="form-card">
+
+    <div class="page-header">
+        <h2>Student Information</h2>
+        <p>Fill all required student details</p>
+    </div>
+
+    <form id="studentForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Admission No.</label>
+                <input type="text" id="admissionNo" placeholder="Enter admission number">
+            </div>
+
+            <div class="form-group">
+                <label>Class</label>
+                <select id="studentClass">
+                    <option>Select class</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Roll No.</label>
+                <input type="number" id="rollNo" placeholder="Enter roll number">
+            </div>
+
+            <div class="form-group">
+                <label>Section</label>
+                <select id="section">
+                    <option>Select section</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" id="name" placeholder="Enter student name">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="gender">
+                    <option>Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="dateOfBirth">
+            </div>
+
+            <div class="form-group">
+                <label>Father Name</label>
+                <input type="text" id="fatherName" placeholder="Enter father name">
+            </div>
+
+            <div class="form-group">
+                <label>Father Phone</label>
+                <input type="text" id="fatherPhone" placeholder="Enter father phone">
+            </div>
+
+            <div class="form-group">
+                <label>Father Occupation</label>
+                <input type="text" id="fatherOccupation" placeholder="Enter occupation">
+            </div>
+
+            <div class="form-group">
+                <label>Mother Name</label>
+                <input type="text" id="motherName" placeholder="Enter mother name">
+            </div>
+
+            <div class="form-group">
+                <label>Mother Phone</label>
+                <input type="text" id="motherPhone" placeholder="Enter mother phone">
+            </div>
+
+            <div class="form-group">
+                <label>Mother Occupation</label>
+                <input type="text" id="motherOccupation" placeholder="Enter occupation">
+            </div>
+
+            <div class="form-group form-full">
+                <label>Address</label>
+                <textarea id="address" rows="4" placeholder="Enter address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" id="city" placeholder="Enter city">
+            </div>
+
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" id="state" placeholder="Enter state">
+            </div>
+
+            <div class="form-group">
+                <label>Pincode</label>
+                <input type="text" id="pincode" placeholder="Enter pincode">
+            </div>
+
+        </div>
+
+        <div class="form-buttons">
+
+            <a href="students.html" class="cancel-btn">
+                Cancel
+            </a>
+
+            <button type="submit" class="save-btn">
+                Save Student
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+
+</main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
+    </main>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/addStudent.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+    <div class="logo">
+        <div class="logo-icon">🏫</div>
+        <span>School ERP</span>
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a class="active" href="students.html">
+            <i class="fa-solid fa-user-graduate"></i>
+            Students
+        </a>
+
+        <a href="attendance.html">
+            <i class="fa-solid fa-calendar-check"></i>
+            Attendance
+        </a>
+
+        <a href="marks.html">
+            <i class="fa-solid fa-book-open"></i>
+            Marks
+        </a>
+
+        <a href="fees.html">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            Fees
+        </a>
+
+        <a href="reports.html">
+            <i class="fa-solid fa-file-lines"></i>
+            Reports
+        </a>
+
+        <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+
+    </nav>
+
+    <div class="logout">
+
+        <a href="index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            <div>
+                <h1>Students</h1>
+                <span>Home / Students</span>
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Admin User</strong>
+                    <p>Administrator</p>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="students-page">
+
+            <div class="students-header">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search by name">
+
+                </div>
+
+                <select id="classFilter">
+
+                    <option value="">All Classes</option>
+                    <option value="6">6th</option>
+                    <option value="7">7th</option>
+                    <option value="8">8th</option>
+                    <option value="9">9th</option>
+                    <option value="10">10th</option>
+
+                </select>
+
+                <a href="add-student.html" class="add-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Student
+
+                </a>
+
+            </div>
+
+            <div class="student-table">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>Admission No.</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                        <th>Roll No.</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/students.js"></script>
+
+</body>
+</html>

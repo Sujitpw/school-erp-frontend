@@ -1,0 +1,244 @@
+.login-container{
+    display:grid;
+    grid-template-columns:42% 58%;
+    min-height:100vh;
+}
+
+/* Left */
+
+.login-left{
+    background:url("../assets/school image.jpg") center center/cover no-repeat;
+    position:relative;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:40px;
+}
+
+.brand{
+    max-width:420px;
+}
+
+.logo-circle{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:#fff;
+    color:var(--primary);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 25px;
+    font-size:52px;
+    box-shadow:var(--shadow);
+}
+
+.brand h1{
+    font-size:44px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.brand p{
+    font-size:18px;
+    line-height:1.7;
+    opacity:.95;
+}
+
+/* Right */
+
+.login-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f7f8fa;
+    padding:60px;
+}
+
+.login-card{
+    width:440px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:45px;
+}
+
+.login-card h2{
+    font-size:34px;
+    text-align:center;
+    margin-bottom:8px;
+}
+
+.login-card>p{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:35px;
+}
+
+/* Form */
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.form-group input{
+    width:100%;
+    height:50px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    padding:0 16px;
+    font-size:15px;
+    transition:.25s;
+    background:#fff;
+}
+
+.form-group input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+/* Remember */
+
+.remember{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+    font-size:14px;
+}
+
+.remember label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.remember a{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.remember a:hover{
+    text-decoration:underline;
+}
+
+/* Button */
+
+button{
+    width:100%;
+    height:52px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    background:var(--primary-dark);
+}
+
+.copyright{
+    margin-top:28px;
+    text-align:center;
+    color:#9ca3af;
+    font-size:13px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.login-container{
+
+grid-template-columns:1fr;
+
+}
+
+.login-left{
+
+display:none;
+
+}
+
+.login-right{
+
+padding:30px;
+
+}
+
+.login-card{
+
+width:100%;
+
+max-width:450px;
+
+}
+
+}
+.input-box{
+
+position:relative;
+
+}
+
+.input-box input{
+
+padding-left:45px;
+
+padding-right:45px;
+
+}
+
+.input-box i:first-child{
+
+position:absolute;
+
+left:16px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+color:#999;
+
+}
+
+.eye{
+
+position:absolute;
+
+right:16px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+cursor:pointer;
+
+color:#999;
+
+}
+.logo-circle img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🏫</div>
+            <span>School ERP</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Students
+            </a>
+
+            <a class="active" href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-book-open"></i>
+                Marks
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fees
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                Users
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-file-lines"></i>
+                Reports
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            <div>
+                <h1>Mark Attendance</h1>
+                <span>Home / Attendance / Mark Attendance</span>
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Admin User</strong>
+                    <p>Administrator</p>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="form-card">
+
+            <div class="page-header">
+                <h2>Attendance Information</h2>
+                <p>Fill attendance details</p>
+            </div>
+
+            <form id="attendanceForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Admission No.</label>
+                        <input
+                            type="text"
+                            id="admissionNo"
+                            placeholder="Enter Admission Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter Student Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Class</label>
+
+                        <select id="studentClass">
+
+                            <option value="">Select Class</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Attendance Date</label>
+                        <input
+                            type="date"
+                            id="attendanceDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+
+                        <select id="status">
+
+                            <option value="">Select Status</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+
+                        </select>
+
+                    </div>
+                                    </div>
+
+                <div class="form-buttons">
+
+                    <a href="attendance.html" class="cancel-btn">
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="save-btn">
+                        Save Attendance
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/addAttendance.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

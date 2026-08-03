@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+       <div class="logo">
+    <img src="assets/logo.png" alt="School ERP Logo" class="logo-img">
+    <span>School ERP</span>
+</div>
+
+        <nav>
+
+            <a class="active" href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Students
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+
+           <a href="marks.html">
+    <i class="fa-solid fa-book-open"></i>
+    Marks
+</a>
+
+            <a href="fees.html">
+    <i class="fa-solid fa-money-bill-wave"></i>
+    Fees
+</a>
+
+           
+
+            <a href="reports.html">
+                <i class="fa-solid fa-file-lines"></i>
+                Reports
+            </a>
+
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+            <div>
+                <h1>Dashboard</h1>
+                <span>Home / Dashboard</span>
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <div class="avatar">A</div>
+
+                <div>
+                    <strong>Admin User</strong>
+                    <p>Administrator</p>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon green">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <span>Total Students</span>
+                    <h2 id="totalStudents">0</h2>
+                    <small>Registered Students</small>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon blue">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+
+                <div>
+                    <span>Total Classes</span>
+
+<h2 id="totalClasses">0</h2>
+
+<small>Active Classes</small>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+                    <span>Today's Attendance</span>
+
+<h2 id="presentToday">0</h2>
+
+<small id="absentToday">0 Absent</small>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon red">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+
+                <div>
+                   <span>Fees Collected</span>
+
+                 <h2 id="feesCollected">₹0</h2>
+
+                 <small id="pendingFees">₹0 Pending</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Bottom Section -->
+
+        <section class="dashboard-bottom">
+
+            <!-- Recent Students -->
+
+            <div class="recent-students">
+
+                <div class="section-header">
+                    <h3>Recent Students</h3>
+                    <a href="students.html">View All</a>
+                </div>
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>Admission No.</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Roll No.</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="recentStudentsBody">
+</tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="section-header">
+                    <h3>Quick Actions</h3>
+                </div>
+
+                <div class="action-list">
+
+                    <a href="add-student.html" class="action-item">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Add Student</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a href="attendance.html" class="action-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Attendance</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                   <a href="add-marks.html" class="action-item">
+    <i class="fa-solid fa-book-open"></i>
+    <span>Add Marks</span>
+    <i class="fa-solid fa-chevron-right"></i>
+</a>
+
+                   <a href="add-fee.html" class="action-item">
+    <i class="fa-solid fa-money-bill-wave"></i>
+    <span>Collect Fees</span>
+    <i class="fa-solid fa-chevron-right"></i>
+</a>
+
+                    <a href="#" class="action-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>View Reports</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
