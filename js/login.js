@@ -121,24 +121,27 @@ loginForm.addEventListener("submit", async function (e) {
 
         } else {
 
-            loadingPopup.classList.remove("show");
+    loadingPopup.classList.remove("show");
 
-            alert("Invalid Username or Password");
+    alert(
+        data.message ||
+        "Login Failed!\n\nThe username or password you entered is incorrect.\n\nPlease check your credentials and try again."
+    );
 
-        }
+}
 
-    } catch (error) {
+   } catch (error) {
 
-        clearTimeout(msg1);
-        clearTimeout(msg2);
-        clearTimeout(msg3);
+    clearTimeout(msg1);
+    clearTimeout(msg2);
+    clearTimeout(msg3);
 
-        loadingPopup.classList.remove("show");
+    loadingPopup.classList.remove("show");
 
-        alert(
-            "Unable to connect to the server.\n\nPlease try again in a few moments."
-        );
+    alert(
+        "Connection Error!\n\nUnable to connect to the server.\n\nThe server may still be starting. Please wait a few moments and try again."
+    );
 
-    }
+}
 
 });
