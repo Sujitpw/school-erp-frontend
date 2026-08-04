@@ -1,4 +1,6 @@
-// Password Show/Hide
+// ============================
+// Password Show / Hide
+// ============================
 
 const eye = document.querySelector(".eye");
 const password = document.getElementById("password");
@@ -19,9 +21,14 @@ eye.addEventListener("click", () => {
 
 });
 
-// Login API
+// ============================
+// Login
+// ============================
 
 const loginForm = document.getElementById("loginForm");
+const loadingPopup = document.getElementById("loadingPopup");
+const loadingTitle = document.getElementById("loadingTitle");
+const loadingMessage = document.getElementById("loadingMessage");
 
 loginForm.addEventListener("submit", async function (e) {
 
@@ -31,39 +38,106 @@ loginForm.addEventListener("submit", async function (e) {
     const password = document.getElementById("password").value;
 
     const requestBody = {
-        username: username,
-        password: password
+
+        username,
+        password
+
     };
 
-    const response = await fetch(BASE_URL + "/api/users/login", {
+    // ===========================
+    // Show Loading Popup
+    // ===========================
 
-        method: "POST",
+    loadingPopup.classList.add("show");
 
-        headers: {
-            "Content-Type": "application/json"
-        },
+    loadingTitle.innerText = "Starting the server...";
+    loadingMessage.innerText =
+        "Please wait while we wake up the server.";
 
-        body: JSON.stringify(requestBody)
+    // Dynamic Messages
 
-    });
+    const msg1 = setTimeout(() => {
 
-    const data = await response.json();
+        loadingTitle.innerText = "Connecting securely...";
+        loadingMessage.innerText =
+            "Establishing a secure connection with the server.";
 
-    console.log("Response:", data);
+    }, 4000);
 
-    if (response.ok) {
+    const msg2 = setTimeout(() => {
 
-        console.log("Token =", data.token);
+        loadingTitle.innerText = "Preparing your dashboard...";
+        loadingMessage.innerText =
+            "Loading your data and personal workspace.";
 
-        localStorage.setItem("token", data.token);
+    }, 9000);
 
-        console.log("Saved =", localStorage.getItem("token"));
+    const msg3 = setTimeout(() => {
 
-        window.location.href = "dashboard.html";
+        loadingTitle.innerText = "Almost there...";
+        loadingMessage.innerText =
+            "Finalizing everything for you.";
 
-    } else {
+    }, 14000);
 
-        alert("Invalid Username or Password");
+    try {
+
+        const response = await fetch(BASE_URL + "/api/users/login", {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify(requestBody)
+
+        });
+
+        const data = await response.json();
+
+        clearTimeout(msg1);
+        clearTimeout(msg2);
+        clearTimeout(msg3);
+
+        if (response.ok) {
+
+            localStorage.setItem("token", data.token);
+
+            // Show success message
+
+            loadingTitle.innerText = "Welcome!";
+            loadingMessage.innerText =
+                "Login successful. Redirecting...";
+
+            setTimeout(() => {
+
+                loadingPopup.classList.remove("show");
+                window.location.href = "dashboard.html";
+
+            }, 1200);
+
+        } else {
+
+            loadingPopup.classList.remove("show");
+
+            alert("Invalid Username or Password");
+
+        }
+
+    } catch (error) {
+
+        clearTimeout(msg1);
+        clearTimeout(msg2);
+        clearTimeout(msg3);
+
+        loadingPopup.classList.remove("show");
+
+        alert(
+            "Unable to connect to the server.\n\nPlease try again in a few moments."
+        );
 
     }
 

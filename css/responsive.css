@@ -1,0 +1,187 @@
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* ===============================
+   Tablet (992px)
+================================ */
+
+@media (max-width: 992px) {
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-bottom{
+        grid-template-columns:1fr;
+    }
+
+    .students-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .students-header select{
+        width:100%;
+    }
+
+    .add-btn{
+        justify-content:center;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ===============================
+   Mobile (768px)
+================================ */
+
+@media (max-width:768px){
+
+    .sidebar{
+        left:-260px;
+        width:260px;
+        z-index:1000;
+    }
+
+    .sidebar.show{
+        left:0;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:18px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-bottom{
+        grid-template-columns:1fr;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    .profile{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+    .students-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .students-header select{
+        width:100%;
+    }
+
+    .add-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .student-table{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:800px;
+    }
+
+    .form-card{
+        padding:20px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-buttons{
+        flex-direction:column;
+    }
+
+    .cancel-btn,
+    .save-btn{
+        width:100%;
+    }
+
+    .coming-card{
+        padding:30px 20px;
+    }
+
+}
+
+/* ===============================
+   Small Mobile (480px)
+================================ */
+
+@media (max-width:480px){
+
+    .topbar h1{
+        font-size:24px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:24px;
+    }
+
+    .logo span{
+        font-size:18px;
+    }
+
+    .avatar{
+        width:38px;
+        height:38px;
+    }
+
+    .page-header h2{
+        font-size:24px;
+    }
+
+    .coming-card h2{
+        font-size:24px;
+    }
+
+}
+@media (max-width:768px){
+
+    .topbar{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-start;
+        flex-wrap:wrap;
+    }
+
+    .profile{
+        margin-top:10px;
+    }
+
+}
+@media (max-width:768px){
+
+    .card{
+        padding:16px;
+    }
+
+    .card h2{
+        font-size:24px;
+    }
+
+}

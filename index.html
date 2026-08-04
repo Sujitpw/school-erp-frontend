@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -131,7 +132,24 @@ placeholder="Enter your password">
     </div>
 
 </div>
+<!-- Loading Popup -->
+<div id="loadingPopup" class="loading-popup">
 
+    <div class="loading-box">
+
+        <div class="spinner"></div>
+
+        <h2 id="loadingTitle">Starting the server...</h2>
+
+        <p>Please wait while we wake up the server.</p>
+
+        <small>
+            This usually takes 20–40 seconds if the server has been idle.
+        </small>
+
+    </div>
+
+</div>
 <script src="js/api.js"></script>
 <script src="js/login.js"></script>
 

@@ -242,3 +242,102 @@ color:#999;
     height:80px;
     object-fit:contain;
 }
+/* ===========================
+   Loading Popup
+=========================== */
+
+.loading-popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loading-popup.show{
+
+    display:flex;
+
+}
+
+.loading-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.loading-box h2{
+
+    margin-top:20px;
+
+    margin-bottom:12px;
+
+    color:#1E6F4F;
+
+}
+
+.loading-box p{
+
+    color:#555;
+
+    margin-bottom:10px;
+
+}
+
+.loading-box small{
+
+    color:#888;
+
+    line-height:1.6;
+
+}
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #1E6F4F;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}

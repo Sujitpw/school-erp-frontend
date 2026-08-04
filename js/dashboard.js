@@ -78,8 +78,29 @@ if (menuToggle && sidebar && mainContent) {
 
     menuToggle.addEventListener("click", function () {
 
-        sidebar.classList.toggle("hide");
-        mainContent.classList.toggle("full");
+        if (window.innerWidth <= 768) {
+
+            sidebar.classList.toggle("show");
+
+        } else {
+
+            sidebar.classList.toggle("hide");
+            mainContent.classList.toggle("full");
+
+        }
+
+    });
+
+    // Mobile par sidebar ke bahar click karne se close
+    document.addEventListener("click", function (e) {
+
+        if (
+            window.innerWidth <= 768 &&
+            !sidebar.contains(e.target) &&
+            !menuToggle.contains(e.target)
+        ) {
+            sidebar.classList.remove("show");
+        }
 
     });
 
