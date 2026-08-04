@@ -96,7 +96,23 @@ loginForm.addEventListener("submit", async function (e) {
 
         });
 
-        const data = await response.json();
+       const text = await response.text();
+
+console.log(text);
+
+let data = {};
+
+try {
+
+    data = JSON.parse(text);
+
+} catch {
+
+    data = {
+        message: text
+    };
+
+}
 
         clearTimeout(msg1);
         clearTimeout(msg2);
