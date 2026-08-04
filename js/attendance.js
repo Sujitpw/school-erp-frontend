@@ -132,7 +132,7 @@ async function deleteAttendance(id) {
 function editAttendance(id) {
 
     window.location.href =
-        "add-attendance.html?id=" + id;
+        "add-attendance_page.html?id=" + id;
 
 }
 

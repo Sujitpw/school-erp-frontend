@@ -79,7 +79,7 @@ form.addEventListener("submit", async function (e) {
             ? "Attendance Updated Successfully"
             : "Attendance Saved Successfully");
 
-        window.location.href = "attendance.html";
+        window.location.href = "attendance_page.html";
 
     } else {
 
